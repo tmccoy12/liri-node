@@ -1,7 +1,7 @@
 var keys = require("./keys.js");
 
 var Twitter = require("twitter");
-var Spotify = require("spotify");
+var Spotify = require("node-spotify-api");
 var request = require("request");
 
 
@@ -29,6 +29,7 @@ var getArtistNames = function (artist) {
 }
 
 var getMeSpotify = function (songName) {
+
     var client = new Spotify(keys.spotifyKeys);
     
 
