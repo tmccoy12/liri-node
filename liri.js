@@ -29,6 +29,8 @@ var getArtistNames = function (artist) {
 }
 
 var getMeSpotify = function (songName) {
+    var client = new Spotify(keys.spotifyKeys);
+    
 
     spotify.search({ type: 'track', query: "songName" }
         , function (error, data) {
@@ -87,7 +89,7 @@ var pick = function (caseData, functionData) {
             getMyTweets();
             break;
         case 'spotify-this-song':
-            getMeSpotify(funtionData);
+            getMeSpotify(functionData);
             break;
         case 'do-what-it-says':
             doWhatItSays();
